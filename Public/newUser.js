@@ -1,8 +1,8 @@
-console.log('Client side js loaded');
+// console.log('Client side js loaded');
 
 const email = localStorage.getItem("newEmail");
 const password = localStorage.getItem("newPassword");
-console.log(email, password);
+// console.log(email, password);
 
 axios.post('/users', {
         "email": email,
