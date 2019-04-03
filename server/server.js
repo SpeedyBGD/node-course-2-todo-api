@@ -14,6 +14,7 @@ var { authenticate } = require('./middleware/authenticate');
 var app = express();
 const port = process.env.PORT;
 
+app.use(express.static(__dirname + '/../Public'));
 app.use(bodyParser.json());
 
 app.post('/todos', authenticate, (req, res) => {

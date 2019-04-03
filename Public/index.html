@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dobrodosao</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="getValues.js"></script>
+    <script src="bower_components/axios/dist/axios.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+
+            <div class="login-form">
+                <form action="views/signedIn.html" target="_blank">
+                    <div class="sign-in-htm">
+                        <div class="group">
+                            <label for="email" class="label">Email</label>
+                            <input id="email" type="email" class="input" name="email" required>
+                        </div>
+                        <div class="group">
+                            <label for="password" class="label">Password</label>
+                            <input id="password" type="password" class="input" data-type="password" name="password" required>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In" onclick="getOldValues()">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a href="#forgot">Forgot Password?</a>
+                        </div>
+                    </div>
+                </form>
+                <form action="views/signedUp.html" target="_blank">
+                    <div class="sign-up-htm">
+                        <div class="group">
+                            <label for="newEmail" class="label">Email</label>
+                            <input id="newEmail" type="text" class="input" required>
+                        </div>
+                        <div class="group">
+                            <label for="newPassword" class="label">Password</label>
+                            <input id="newPassword" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <label for="newPasswordRepeat" class="label">Repeat Password</label>
+                            <input id="newPasswordRepeat" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up" onclick="getNewValues()">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1"><a href="#">Already Member?</a></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
