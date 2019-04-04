@@ -9,7 +9,7 @@ axios.post('/users', {
         "password": password
     })
     .then(function(response) {
-        console.log(response.data);
+        console.log(response.data.email);
     })
     .catch(function(error) {
         console.log(error);
